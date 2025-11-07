@@ -1,0 +1,103 @@
+You are analyzing a commercial contract document. Extract structured information from this contract by answering the following questions. Use ONLY information found in this specific contract.
+
+**IMPORTANT:** Read through the entire PDF document carefully and extract all relevant information.
+
+## Contract Type Classification
+
+Classify this contract into ONE of these types:
+- Affiliate Agreement
+- Agency Agreement
+- Collaboration/Cooperation Agreement
+- Co-Branding Agreement
+- Consulting Agreement
+- Development Agreement
+- Distributor Agreement
+- Endorsement Agreement
+- Franchise Agreement
+- Hosting Agreement
+- IP Agreement
+- Joint Venture Agreement
+- License Agreement
+- Maintenance Agreement
+- Manufacturing Agreement
+- Marketing Agreement
+- Non-Compete/No-Solicit/Non-Disparagement Agreement
+- Outsourcing Agreement
+- Promotion Agreement
+- Reseller Agreement
+- Service Agreement
+- Sponsorship Agreement
+- Supply Agreement
+- Strategic Alliance Agreement
+- Transportation Agreement
+- Other
+
+## Information to Extract
+
+1. **Agreement Name**: The official title or name of the agreement as stated in the document
+2. **Agreement Type**: Choose from the contract types listed above
+3. **Parties**: 
+   - Name and role of each party (e.g., Licensor, Licensee, Vendor, Customer)
+   - Where each party is incorporated (Country and State/Province using ISO 3166 names)
+4. **Key Dates** (use yyyy-mm-dd format if absolute dates are given):
+   - Agreement Date
+   - Effective Date
+   - Expiration Date
+5. **Renewal Terms**:
+   - Renewal Term
+   - Notice Period to Terminate Renewal
+6. **Governing Law**:
+   - Governing law country (ISO 3166 country name)
+   - Governing law state/province
+   - If multiple countries mentioned, which is most favored
+7. **Contract Clauses**: For EACH of these clause types, determine:
+   - Does it exist in the contract? (Yes/No)
+   - If yes, extract FULL TEXT EXCERPTS that prove its existence
+   - Extract complete paragraphs or relevant passages, not just partial sentences
+
+**Clause Types to Check:**
+- Competitive Restriction Exception
+- Non-Compete
+- Exclusivity
+- No-Solicit Of Customers
+- No-Solicit Of Employees
+- Non-Disparagement
+- Termination For Convenience
+- Rofr/Rofo/Rofn
+- Change Of Control
+- Anti-Assignment
+- Revenue/Profit Sharing
+- Price Restrictions
+- Minimum Commitment
+- Volume Restriction
+- IP Ownership Assignment
+- Joint IP Ownership
+- License grant
+- Non-Transferable License
+- Affiliate License-Licensor
+- Affiliate License-Licensee
+- Unlimited/All-You-Can-Eat-License
+- Irrevocable Or Perpetual License
+- Source Code Escrow
+- Post-Termination Services
+- Audit Rights
+- Uncapped Liability
+- Cap On Liability
+- Liquidated Damages
+- Warranty Duration
+- Insurance
+- Covenant Not To Sue
+- Third Party Beneficiary
+
+## Instructions
+
+Extract ALL the information listed above from the PDF document. 
+
+**For clauses:**
+- Provide COMPLETE TEXT EXCERPTS directly from the contract - do not summarize or paraphrase
+- Extract full paragraphs to preserve context
+- Each excerpt should be a complete, self-contained text passage
+
+**For missing information:**
+- Use empty strings for text fields if not found
+- Set exists=false for clauses that don't exist in the contract
